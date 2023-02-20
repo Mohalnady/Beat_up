@@ -1,0 +1,523 @@
+* {
+    margin: 0; padding: 0;
+    border: 0; outline: 0;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    font-family: 'open sans', sans-serif;
+    box-sizing: border-box;
+    transition: all .3s linear;
+}
+html {
+    Scroll-behavior: smooth;
+    font-size: 62,5%;
+
+}
+:root {
+    --main: #2273f8;
+    --light: #fff;
+    --dark: #000;
+    --text: #777;
+    --box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.1);
+}
+::selection {
+    color: var(--light);
+    background: var(--main)
+}
+/* ------ header -------- */
+header {
+    padding: 2rem 7% 2rem 15%;
+    min-height: 2rem; 
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "logo logo. . . . . . . nav nav nav";
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    background: var(--main);
+    z-index: 1111;
+}
+header .fa-bars {
+    display: none;
+}
+header .logo {
+    grid-area: logo;
+    font-size: 1.7rem; 
+    color: var(--light);
+    font-weight: 600;
+
+}
+header nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    overflow: hidden
+}
+header nav a {
+    margin-left: 1.5rem; 
+    font-size: 1.7rem;  
+    font-weight: 500;
+    color: var(--light);
+    position: relative;
+    overflow: hidden ;
+    padding: 1rem 0;
+    display: block;
+}
+header nav li {
+}
+header nav a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .2rem; 
+    bottom: 0;
+    right: 100%;
+    background-color: var(--light);
+    transition: .3s linear;
+}
+header nav a:hover:after {
+    right: 0;
+}
+/* ------ header -------- */
+/* ------ home -------- */
+.home {
+    background-image: url(/images/homg-img.png);
+    padding: 5rem 15%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100vw;
+    height: calc(100vh - 2rem);
+}
+.home .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 14rem;
+}
+.home .container .txt-content {
+    flex: 1;
+}
+.home .container .img {
+    flex: 1;
+}
+.home .container .img img {
+    width: 130%;
+
+}
+.header-1 {
+    font-size: 4rem; 
+    font-weight: 700;
+    color: var(--light);
+    width: 100%;
+}
+.main-p {
+    font-size: 1.1rem; 
+    font-weight: 400;
+    color: var(--light);
+    line-height: 1.6;
+    letter-spacing: .1rem;
+}
+.main-btn {
+    display: block;
+    background-color: var(--light);
+    border: .2rem solid var(--light);
+    color: var(--main);
+    border-radius: 2rem;
+    padding: .6rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 3.4rem;
+    cursor: pointer;
+}
+.main-btn:hover {
+    border: .2rem solid var(--light);
+    background-color: transparent;
+    color: var(--light);
+}
+/* ------ home -------- */
+/* ------ about -------- */
+.about {
+    margin-top: 2rem;
+    padding: 5rem 15%;
+}
+.about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.about .container .img {
+    flex: 1; 
+
+}
+.about .container .img img {
+    width: 100%;
+
+}
+.about .container .txt-content{
+    flex: 1; 
+    
+}
+h4 {
+    background:var(--main);
+    color: var(--light);
+    font-size: 2rem;
+    align-items: 400;
+    padding: 1rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+h2 {
+    color: var(--main);
+    font-size: 2.5rem;
+    align-items: 600;
+    padding: 1rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+.about .container .txt-content ul li {
+    font-size: 1.3rem; 
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.6;
+    letter-spacing: .1rem;
+}
+.about .container .txt-content ul li i {
+    color: var(--main)
+}
+.about .container .txt-content .main-p {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+/* ------ about -------- */
+/* ------ features -------- */
+.features {
+    padding: 5rem 15%;
+}
+h2,
+h4 {
+    color: var(--dark);
+    margin: 1rem auto;
+}
+.top-content {
+    text-align: center;
+}
+.features .container .main-p {
+    color: var(--text)
+}
+.features .container .box-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 5rem;
+}
+.features .container .box-content .box {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center ;
+    flex-direction: column;
+}
+.features .container .box-content .box .icon {
+    position: relative;
+    width: 5rem ;
+    height: 5rem;
+    margin: 4rem auto 2.5rem;
+}
+.features .container .box-content .box .icon i {
+    align-self: center;
+    font-size: 2rem;
+}
+.features .container .box-content .box .icon:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 5rem;
+    height: 5rem;
+    background: var(--main);
+    transform: translateY(-30%)rotate(45deg);
+    border: .5rem solid #f6f6f6;
+}
+
+/* ------ features -------- */
+/* ------ products -------- */
+.products {
+    padding: 5rem 15%;
+    
+}
+.products h4,
+.products h2{
+    text-align: center;
+    margin: 1rem auto;
+
+}
+.products .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 5rem;
+}
+.products .container .product {
+    padding: 1rem; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.products .container .product .img img {
+    width: 100%;
+}
+.products .container .product .img {
+    margin: 1rem 0;
+}
+.products .product .h3 {
+    margin: 1rem auto; 
+    display: block;
+}
+.products .container .product .main-btn {
+    background-color: var(--main);
+    color: var(--light);
+    margin: 1rem auto;
+    display: block
+    ;
+}
+/* ------ products -------- */
+/* ------ contact us -------- */
+.contact {
+    background-image: url(/images/pexels-parag-deshmukh-577769.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0 auto
+}
+.container h2,
+.container h4 {
+    text-align: center;
+}
+.contact .container {
+    padding: 5rem 15%;
+
+
+}
+.contact .container .input-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    gap: 1rem;
+} 
+.contact .container .input-box input {
+    padding: 1rem;
+    border: .2rem solid var(--light);
+    background-color: transparent;
+    width: 50%;
+    gap: 1rem
+}
+.contact .container .input-box input::placeholder {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color:  var(--light)
+}
+.contact .container input[type="submit"] {
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 25rem;
+    background-color: var(--main);
+    color: var(--light);
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: .2rem solid var(--main);
+}
+.contact .container input[type="submit"]:hover {
+    background-color: transparent;
+    border: .2rem solid var(--light);
+} 
+.contact .container form {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+.contact .container form textarea {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    border: .2rem solid var(--light);
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.contact .container form textarea::placeholder {
+    color: var(--light)
+
+}
+.contact .container form textarea:hover,
+.contact .container .input-box input:hover {
+border-color: var(--main);
+}
+
+/* ------ contact us -------- */
+/* ------ footer -------- */
+footer {
+    padding: 5rem 15%;
+    background: var(--main);
+
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+footer .container .col h4 {
+    text-align: left;
+    margin: 0;
+}
+footer .container .col ul {
+}
+footer .container .col ul li {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.3rem; 
+    font-weight: 400;
+    color: var(--light);
+}
+footer .container .col address,
+footer .container .col .webseite,
+footer .container .col .phone  {
+    font-size: 1.3rem;
+    color: var(--light);
+    margin-bottom: 1rem;
+}
+footer .container .col i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+footer .container .col li:hover,
+footer .container .col address:hover,
+footer .container .col .webseite:hover,
+footer .container .col .phone:hover {
+    text-decoration: underline;
+    text-underline-offset: .3rem;
+}
+/* ------ footer -------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+    html{
+        font-size: 55%;
+    }
+    .home .container {
+        flex-flow: wrap column;
+        padding-top: 14rem;
+    }
+    .contact .container {
+        padding: 4rem 10%;
+    
+    
+    }
+    .contact .container .input-box {
+        flex-flow: wrap column;
+        display: flex;
+        width: 100%
+    } 
+    .contact .container .input-box input {
+        width: 100%;
+    }
+    .contact .container form {
+        width: 100%;
+    }
+    .contact .container form textarea {
+        width: 100%;
+
+    }
+    .home {
+        background-image: none;
+        background-color: var(--main);
+    }
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 52%;
+    }
+    .header-1 {
+        text-align: center;
+    }
+    .main-p {
+        text-align: center;
+        font-size: 1.3rem; 
+        }
+    .main-btn {
+        display: block;
+        background-color: var(--light);
+        border: .2rem solid var(--light);
+        color: var(--main);
+        border-radius: 2rem;
+        padding: .6rem 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-top: 3.4rem;
+        cursor: pointer;
+    }
+    .home .container .img img {
+        width: 110%;
+    
+    }
+    header .fa-bars {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+        color: var(--light)
+    }
+    header nav {
+     display: none;
+    }
+    header {
+        padding: 2rem 5% ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .home button {
+        margin: 3.4rem auto;
+    }
+    .about,
+    .products, 
+    .features, 
+    footer,
+    .contact {
+        padding: 2rem 5%;
+    }
+    .about .container {
+        flex-flow: wrap column;
+    }
+    .contact .container form {
+        width: 100%;
+    }
+}
